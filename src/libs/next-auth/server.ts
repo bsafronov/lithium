@@ -10,4 +10,6 @@ export async function auth() {
   if (!session) {
     return redirect("/auth");
   }
+
+  return session.user;
 }

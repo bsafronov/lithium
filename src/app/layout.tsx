@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/libs/next-themes";
 import { AuthProvider } from "@/libs/next-auth";
 import { QueryProvider } from "@/libs/react-query";
+import { Toaster } from "@/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <ThemeProvider>
           <AuthProvider>
+            <Toaster />
             <QueryProvider>{children}</QueryProvider>
           </AuthProvider>
         </ThemeProvider>
